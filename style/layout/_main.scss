@@ -10,7 +10,7 @@
 }
 header{
     .logo__container{
-        position: relative;
+        // position: relative;
         z-index: 10;
         position : absolute;
         top: -140px;
@@ -20,6 +20,17 @@ header{
         transform: translateX(-50%);
         background: url("images/illustration-woman-online-mobile.svg") no-repeat 
         center/contain ;
+    }
+    .shadow__logo{
+        position:absolute ;
+        z-index: 5;
+        background: url("images/bg-pattern-mobile.svg") center/contain no-repeat;
+        top: -80px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 250px;
+        height: 250px;
+
     }
     h1{
         margin-top: 100px;
@@ -47,13 +58,31 @@ header{
     }
 }
 .answers{
-    display: none;
+    display: block;
     margin-top: 10px;
     width: 90%;
+    transition:max-height 0.5s ease-in-out;
+    padding-bottom:0px ;
+    max-height: 0px;
+    overflow: hidden;
+
 }
 .answers__active{
+    max-height: 50px;
     display: block;
-    height: 50px;
+    animation:paddingBottom ease 0.5s forwards;
+
+    @keyframes paddingBottom{
+        0%{
+            padding-bottom: 0;
+        }
+        80%{
+            padding-bottom: 50px;
+        }
+        100%{
+            padding-bottom: 15px;
+        }
+    }
 }
 .spin__arrow{
     transform: rotate(180deg) translateY(5px);
