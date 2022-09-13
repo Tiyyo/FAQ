@@ -6,21 +6,20 @@
     margin-top: 150px;
     border-radius: 10px;
     padding: 10px 10px 15px 10px;
-    width: 335px;
+    width: 340px;
 }
 header{
     .logo__container{
         position: relative;
         z-index: 10;
         position : absolute;
-        top: -135px;
+        top: -140px;
         height: 250px;
         width: 70%;
         left :50%;
         transform: translateX(-50%);
-        background: url("/images/illustration-woman-online-mobile.svg") no-repeat 
-        center/contain;
-        ;
+        background: url("images/illustration-woman-online-mobile.svg") no-repeat 
+        center/contain ;
     }
     h1{
         margin-top: 100px;
@@ -34,14 +33,18 @@ header{
     }
 }
 .question__answer{
-    border-radius: 1px dashed black;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.176);
 }
 .questions{
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    margin: 10px 0px;
-   
+    margin: 20px 0px; 
+    &:hover{
+        color : $soft-red;
+        cursor: pointer;
+        transition: 0.2s ease-in;
+    }
 }
 .answers{
     display: none;
@@ -50,9 +53,13 @@ header{
 }
 .answers__active{
     display: block;
-    height: 30px;
+    height: 50px;
 }
 .spin__arrow{
     transform: rotate(180deg) translateY(5px);
     transition: 0.25s ease-in-out;
+}
+.text__active{
+    color : $very-dark-desaturated-blue;
+    font-weight: 700;
 }
